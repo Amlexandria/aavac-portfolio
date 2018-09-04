@@ -14,45 +14,69 @@
     <div id="vue">
         <nav id="top" class="nav-extended ">
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo">AAVC</a>
+                <a href="#introo" class="brand-logo" @click="showingIntro">AAVC</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="" @click="printingAbout()">ABOUT</a></li>
-                    <li><a href="">WORKS</a></li>
+                    <li><a href="#" @click="showingAbout">ABOUT</a></li>
+                    <li><a href="" @click="showingWorks">WORKS</a></li>
                     <li><a href="collapsible.html">CONTACT</a></li>
                 </ul>
             </div>
         </nav>
-        <main>
+        <main id="introo" v-if="section == 'intro'">
 
         </main>
-        <div id="section-about"></div>
-        <section class="about row">
-            <div class="about-1 offset-l1 col l5 m5 s12">
-                <h1 class="col l12 a-1">A<span>bout me</span></h1>
-                <h5 class="col l12">I'm a front-end developer and a graphic designer based in gdl</h5>
-                <p class="col l12">I enjoy looking for and mixing different elements to turn ideas into creative and beautiful designs. When I'm not desingin or programing,  you'll find me singing, creating music, working in social projects, or taking the sun somwhere.</p>
-            </div>
-        </section>
-        <section class="parts row">
-            <div class="offset-l1 col l3 m3 s12">
-                <h5 class="col l12">Part Designer</h5>
-                <p class="col l12">Thinking<br>Searching<br>Music<br>Pencil, eraser, paper, google...<br>Photoshop<br>Illustrator<br>InDesign<br>Dancing on my chair </p>
-            </div>
-            <div class="col s12 m4 l4">
-                <img class="grafica" src="assets/images/grafica.png" alt="grafica">
-            </div>
-            <div class="offset-l1 offset-m1 col l3 m3 s12">
-                <h5 class="col l12">Part Developer</h5>
-                <p class="col l12">Analysis<br>Agile<br>JavaScript<br>Documentation<br>Html5<br>CSS3<br>InDesign<br>Dancing on my chair </p> 
-            </div>
-        </section>
-        <section class="facts row">
-            <div class="offset-l1 col l5 m5 s12">
-                <h5 class="col l12">Random facts</h5>
-                <p class="col l12">I smile a lot.<br>i love eat papaya, green juice and broccoli with mayonnaise.<br>I love interior design<br>I like to dance with the songs of the credits of the movies<br>I love huaraches.<br>The sing of the birds is the most beautiful thin of the world<br></p>
-            </div>
-        </section>
+    <!-- ABOUT SECTION -->
+        <template v-if="section == 'about'">
+            <section class="about row">
+                <div class="about-1 offset-l1 col l5 m5 s12">
+                    <h1 class="col l12 a-1">A<span>bout me</span></h1>
+                    <h5 class="col l12">I'm a front-end developer and a happy graphic designer.</h5>
+                    <p class="col l12">I enjoy looking for and mixing different elements to turn ideas into creative and beautiful designs. When I'm not desingin or programing,  you'll find me singing, creating music, working in social projects, or taking the sun somwhere.</p>
+                </div>
+                <div class="about-2 col l5 m5 s12"></div>
+            </section>
+            <section class="parts row">
+                <div class="offset-l1 col l3 m3 s12">
+                    <h5 class="col l12">Part Designer</h5>
+                    <p class="col l12">Thinking<br>Searching<br>Music<br>Pencil, eraser, paper, google...<br>Photoshop<br>Illustrator<br>InDesign<br>Dancing on my chair </p>
+                </div>
+                <div class="col s12 m4 l4">
+                    <img class="grafica" src="assets/images/grafica.png" alt="grafica">
+                </div>
+                <div class="offset-l1 offset-m1 col l3 m3 s12">
+                    <h5 class="col l12">Part Developer</h5>
+                    <p class="col l12">Analysis<br>Agile<br>JavaScript<br>Documentation<br>Html5<br>CSS3<br>InDesign<br>Dancing on my chair </p> 
+                </div>
+            </section>
+            <section class="facts row">
+                <div class="offset-l1 col l5 m5 s12">
+                    <h5 class="col l12">Random facts</h5>
+                    <p class="col l12">I smile a lot.<br>I love papaya, green juice and broccoli with mayonnaise.<br>I love interior design and plants.<br>I like to dance with the songs of the credits of the movies.<br>I love huaraches.<br>I want to leanr how to yodel.<br></p>
+                </div>
+            </section>
+        </template>
+    <!-- WORKS SECTION -->
+        <template v-if="section == 'works'">
+            <section class="works">
+                <div class="row todo-app">
+                    <h6 class="offset-l1 col l11">Ambar de Alejandría</h6>
+                    <h4 class="offset-l2 col l10">To-do App</h4>
+                    <p class="offset-l2 col l10">Design and development of a Web App that reads<br>an external and filter all the relevant information<br> in a human readable HTML page.</p>
+                    <p class="category offset-l2 col l10"><strong>CATEGORY</strong></p>
+                    <p class="category-text offset-l2 col l10">Website</p>
+                    <a class="view-case waves-effect waves-light btn offset-l3 col l1">View Case</a>
+                </div>
+                <div class="row data-dashboard">
+                    <h4 class="offset-l2 col l10">L Dashboard</h4>
+                    <p class="offset-l2 col l10">Design and development of a Web App that reads<br>an external and filter all the relevant information<br> in a human readable HTML page.</p>
+                    <p class="category offset-l2 col l10"><strong>CATEGORY</strong></p>
+                    <p class="category-text offset-l2 col l10">Website</p>
+                    <a class="view-case waves-effect waves-light btn offset-l3 col l1">View Case</a>
+                </div>
+            </section>
+        </template> 
+
     </div>
     
 

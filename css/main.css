@@ -4,25 +4,33 @@ html {
 }
 
 nav {
-    padding: 0rem 2rem 4.5rem 2rem;
+    padding: 0rem 2rem 6rem 2rem;
     background-color: transparent;
-    background-image: url("../assets/images/menu2.png");
+    background-image: url("../assets/images/menu-1.png");
     background-position: bottom;
     background-size: cover;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0), 0 3px 1px -2px rgba(0,0,0,0), 0 1px 5px 0 rgba(0,0,0,0);
     position: fixed;
 }
+
+nav.nav-extended {
+    height: 15rem;
+}
+
 nav .brand-logo{
     font-family: 'Monoton', cursive;
 }
 
 main {
     height: 100vh;
+    background-image: url("../assets/images/intro-coder.png");
+    background-size: cover;
+    padding-bottom: 8rem;
     /* background: linear-gradient(to right, rgba(250,172,15,1) 0%, rgba(248,162,29,1) 6%, rgba(222,5,255,1) 100%); */
 }
 
 .row {
-    margin-bottom: 7rem;
+    margin-bottom: 0;
 }
 
 section .about {
@@ -30,8 +38,15 @@ section .about {
 }
 
 .about-1 {
-    margin-top: 5rem;
+    margin-top: 10rem;
 }
+
+.about {
+    height: auto;
+    background-image: url("../assets/images/yoverde.png");
+    background-size: cover;
+}
+
 .a-1 {
     font-family: 'Monoton', cursive;
     font-size: 5rem;
@@ -50,6 +65,7 @@ section.about h5 {
 p {
     font-family: 'Quicksand', sans-serif;
     font-size: 1.2rem;
+    margin-bottom: 5rem;
 }
 
 section.parts {
@@ -81,3 +97,15 @@ section.parts p{
     width: 100%;
 }
 
+/* WORKS SECTION */
+.data-dashboard {
+    background-image: url("../assets/gifs/data-dash.gif");
+    background-size: cover;
+    /* height: 100vh; */
+    padding-top: 6rem;
+    padding-bottom: 15rem;
+}
+
+.data-dashboard h4 {
+    /* margin-top: 8rem; */
+}
