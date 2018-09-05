@@ -24,6 +24,4 @@ const app = new Vue ({
     }
 })
 
-// function printingAbout (){
-//     $("#section-about").append(aboutTemplate);
-// }
+
