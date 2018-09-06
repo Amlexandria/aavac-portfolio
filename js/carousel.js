@@ -412,4 +412,4 @@
       slideDuration : 14000 //The amount of time between animations (milliseconds)
   };
   
-  $('.carouselll').Zippy(args);
+//   $('.carouselll').Zippy(args);

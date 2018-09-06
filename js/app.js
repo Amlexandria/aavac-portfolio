@@ -24,7 +24,28 @@ const app = new Vue ({
                 $('.carouselll').Zippy(args); // => 'updated'
               })
             
-        }
+        },
+
+        showingDev: function(e){
+            e.preventDefault();
+            this.section = "dev"
+            this.$nextTick(function () {
+                $('.carouselll').Zippy(args); // => 'updated'
+              })
+            
+        },
+
+        showingDesigner: function(e){
+            e.preventDefault();
+            this.section = "designer"
+            this.$nextTick(function () {
+                $('.carouselll').Zippy(args); // => 'updated'
+              })
+            
+        },
+
+
+        
     }
 })
 

@@ -283,7 +283,7 @@ lb.click(function() {
     }, 0);
     scrolling = false;
     if (curPage <= 3) {
-      scrollIn.addClass('opa');
+      // scrollIn.addClass('opa');
       scrollIn2.addClass('opa');
     }
   }

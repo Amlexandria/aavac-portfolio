@@ -32,8 +32,8 @@
                   <span class="lin1"></span>
                   <span class="lin2"></span>
                 </div>
-                <div class="button-left"><span class="view">Designer</span></div>
-                <div class="button-right"><span class="view">DEVELOPER</span></div>
+                <a class="button-right" @click="showingDev"><span class="view">DEVELOPER</span></a>
+                <a class="button-left" @click="showingDesigner"><span class="view">Designer</span></a>
                 <div class="child-left-1">
                   <div class="left1 leftt"></div>
                 </div>
@@ -75,30 +75,10 @@
                 </div>
             </section>
         </template>
-    <!-- WORKS SECTION -->
-        <!-- <template v-if="section == 'works'">
-            <section class="works">
-                <div class="row todo-app">
-                    <h4 class="offset-l2 col l10">To-do App</h4>
-                    <p class="offset-l2 col l10">Design and development of a Web App that reads
-                        <br>an external and filter all the relevant information<br> in a human readable HTML page.</p>
-                    <p class="category offset-l2 col l10"><strong>CATEGORY</strong></p>
-                    <p class="category-text offset-l2 col l10">Website</p>
-                    <a class="view-case waves-effect waves-light btn offset-l3 col l1">View Case</a>
-                </div>
-                <div class="row data-dashboard">
-                    <h4 class="offset-l2 col l10">L Dashboard</h4>
-                    <p class="offset-l2 col l10">Design and development of a Web App that reads
-                        <br>an external and filter all the relevant information<br> in a human readable HTML page.</p>
-                    <p class="category offset-l2 col l10"><strong>CATEGORY</strong></p>
-                    <p class="category-text offset-l2 col l10">Website</p>
-                    <a class="view-case waves-effect waves-light btn offset-l3 col l1" href="https://amlexandria.github.io/data-dashboard/" target=”_blank”>View Case</a>
-                </div>
-            </section>
-        </template> -->
-    <!-- WORKS PORTFOLIO SECTION -->
-    <template v-if="section == 'works'">
-        <section class="works portfolio-dev">
+    
+    <template v-if="section == 'works'||section == 'dev'||section == 'designer'">
+        
+        <section id="portfolio-dev"class="works " v-if="section == 'works' ||section == 'dev' ">
             <div class="row ">
                 <div class="wrapperrr offset-l1 col l10 s12">
                     <div class="carouselll">
@@ -150,36 +130,33 @@
                 </div>
             </div>
         </section>
-    <!-- </template> -->
+    
     <!-- PORTFOLIO DESIGN -->
-    <section class="works portfolio-design">
+    <section id="portfolio-design" class="works " v-if="section == 'works' ||section == 'designer' ">
             <div class="row ">
                 <div class="wrapperrr offset-l1 col l10 s12">
                     <div class="carouselll">
                         <div class="innerrr">
                             <div class="slide active dslide">
-                                <h4 class="offset-l1 col l10">L Dashboard</h4>
+                                <h4 class="offset-l1 col l10">Bullfrog label</h4>
                                 <p class="offset-l1 text-caru col l10">Design and development of a Web App that reads
                                     <br>an external and filter all the relevant information<br> in a human readable HTML page.</p>
                                 <p class="offset-l1 text-caru category  col l10"><strong>CATEGORY</strong></p>
                                 <p class="offset-l1 text-caru category-text  col l10">Website</p>
-                                <a class="lala view-case waves-effect waves-light btn offset-l3 col l1" href="https://amlexandria.github.io/data-dashboard/" target=”_blank”>View Case</a>
                             </div>
                             <div class="slide dslide">
-                                <h4 class="offset-l1 col l10">To-Do App</h4>
+                                <h4 class="offset-l1 col l10">Anonymous Talent</h4>
                                 <p class="offset-l1 text-caru col l10">Design and development of a mobile App that
                                     <br>let the user to login and manage (add, check and <br>remove) their tasks and storage them in firebase.</p>
                                 <p class="offset-l1 text-caru category  col l10"><strong>CATEGORY</strong></p>
                                 <p class="offset-l1 text-caru category-text  col l10">Mobile</p>
-                                <a class="lala view-case waves-effect waves-light btn offset-l3 col l1" href="https://todo-list-d3fbe.firebaseapp.com/" target=”_blank”>View Case</a>
                             </div>
                             <div class="slide dslide">
-                                <h4 class="offset-l1 col l10">Take my Money (e-commerce)</h4>
+                                <h4 class="offset-l1 col l10">Kin Wooh</h4>
                                 <p class="offset-l1 text-caru col l10">Development and design of an E-commerece
                                     <br>following SPA model, using Mercado Libre and <br>Paypal APIs for products purchase.</p>
                                 <p class="offset-l1 text-caru category  col l10"><strong>CATEGORY</strong></p>
                                 <p class="offset-l1 text-caru category-text  col l10">Website</p>
-                                <a class="lala view-case waves-effect waves-light btn offset-l3 col l1" href="https://amlexandria.github.io/Take-my-money-e-commerce-/" target=”_blank”>View Case</a>
                             </div>
                             <div class="slide dslide">
                                 <h4 class="offset-l1 col l10">Glinks MD</h4>
@@ -187,7 +164,6 @@
                                     <br>that receives a file that contains markdown text<br> and returns a list of all the links found.</p>
                                 <p class="offset-l1 text-caru category  col l10"><strong>CATEGORY</strong></p>
                                 <p class="offset-l1 text-caru category-text  col l10">Website</p>
-                                <a class="lala view-case waves-effect waves-light btn offset-l3 col l1" href="https://lorevazquez.github.io/extract-links-from-md/" target=”_blank”>View Case</a>
                             </div>
                             <div class="slide dslide">
                                     <h4 class="offset-l1 col l10">Trello</h4>
@@ -195,7 +171,7 @@
                                         <br>that replicates the basic functionality<br>of the Trello website.</p>
                                     <p class="offset-l1 text-caru category  col l10"><strong>CATEGORY</strong></p>
                                     <p class="offset-l1 text-caru category-text  col l10">Website</p>
-                                    <a class="lala view-case waves-effect waves-light btn offset-l3 col l1" href="https://amlexandria.github.io/Replicando-funcionalildad-de-Trello/" target=”_blank”>View Case</a>
+                                    
                                 </div>
                         </div>
                         <div class="arrow arrow-left"></div>
