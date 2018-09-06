@@ -20,6 +20,10 @@ const app = new Vue ({
         showingWorks: function(e){
             e.preventDefault();
             this.section = "works"
+            this.$nextTick(function () {
+                $('.carouselll').Zippy(args); // => 'updated'
+              })
+            
         }
     }
 })
