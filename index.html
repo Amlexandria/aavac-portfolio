@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Quicksand|Codystar|Heebo:900|Monoton|Rubik+Mono+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
@@ -20,7 +21,8 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="#" @click="showingAbout">ABOUT</a></li>
                     <li><a href="" @click="showingWorks">WORKS</a></li>
-                    <li><a href="collapsible.html">CONTACT</a></li>
+                    <li><a href="https://github.com/Amlexandria" target=”_blank”><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/ambar-de-alejandria/" target=”_blank”><i class="fab fa-linkedin-in"></i></a></li>
                 </ul>
             </div>
         </nav>
@@ -45,52 +47,187 @@
                 <div class="about-1 offset-l1 col l5 m5 s12">
                     <h1 class="col l12 a-1">A<span>bout me</span></h1>
                     <h5 class="col l12">I'm a front-end developer and a happy graphic designer.</h5>
-                    <p class="col l12">I enjoy looking for and mixing different elements to turn ideas into creative and beautiful designs. When I'm not desingin or programing,  you'll find me singing, creating music, working in social projects, or taking the sun somwhere.</p>
+                    <p class="col l12">I enjoy looking for and mixing different elements to turn ideas into creative and beautiful designs. When I'm not designing or programming,  you'll find me singing, creating music, working in social projects, or taking the sun somwhere.</p>
                 </div>
                 <div class="about-2 col l5 m5 s12"></div>
             </section>
             <section class="parts row">
                 <div class="part1 offset-l1 col l3 m3 s12">
                     <h5 class="col l12">Part Designer</h5>
-                    <p class="col l12">Thinking<br>Searching<br>Music<br>Pencil, eraser, paper, google...<br>Photoshop<br>Illustrator<br>InDesign<br>Dancing on my chair </p>
+                    <p class="col l12">Thinking<br>Searching<br>Music<br>Pencil, eraser, paper, google...<br>Photoshop
+                        <br>Illustrator<br>InDesign<br>Dancing on my chair </p>
                 </div>
                 <div class="part2 col s12 m4 l4">
                     <img class="grafica" src="assets/images/grafica.png" alt="grafica">
                 </div>
                 <div class="part3 offset-l.5 offset-m1 col l3 m3 s12">
                     <h5 class="offset-l3 col l9">Part Developer</h5>
-                    <p class="offset-l3 col l9">Analysis<br>Agile<br>JavaScript<br>Documentation<br>Html5<br>CSS3<br>InDesign<br>Dancing on my chair </p> 
+                    <p class="offset-l3 col l9">Analysis<br>Agile<br>GIT<br>JavaScript<br>Html5<br>CSS3<br>Vue.js
+                        <br>jQuery<br>AJAX<br>Firebase<br>Node.js</p> 
                 </div>
             </section>
             <section class="facts row">
                 <div class="offset-l1 col l5 m5 s12">
                     <h5 class="col l12">Random facts</h5>
-                    <p class="col l12">I smile a lot.<br>I love papaya, green juice and broccoli with mayonnaise.<br>I love interior design and plants.<br>I like to dance with the songs of the credits of the movies.<br>I love huaraches.<br>I want to leanr how to yodel.<br></p>
+                    <p class="col l12">I smile a lot.<br>I love papaya, green juice and broccoli with mayonnaise.
+                        <br>I love interior design and plants.<br>I like to dance with the songs of the credits of the movies.
+                        <br>I love huaraches (the shoes).<br>I want to learn how to yodel... and a thousand more stuffs.<br></p>
                 </div>
             </section>
         </template>
     <!-- WORKS SECTION -->
-        <template v-if="section == 'works'">
+        <!-- <template v-if="section == 'works'">
             <section class="works">
                 <div class="row todo-app">
                     <h4 class="offset-l2 col l10">To-do App</h4>
-                    <p class="offset-l2 col l10">Design and development of a Web App that reads<br>an external and filter all the relevant information<br> in a human readable HTML page.</p>
+                    <p class="offset-l2 col l10">Design and development of a Web App that reads
+                        <br>an external and filter all the relevant information<br> in a human readable HTML page.</p>
                     <p class="category offset-l2 col l10"><strong>CATEGORY</strong></p>
                     <p class="category-text offset-l2 col l10">Website</p>
                     <a class="view-case waves-effect waves-light btn offset-l3 col l1">View Case</a>
                 </div>
                 <div class="row data-dashboard">
                     <h4 class="offset-l2 col l10">L Dashboard</h4>
-                    <p class="offset-l2 col l10">Design and development of a Web App that reads<br>an external and filter all the relevant information<br> in a human readable HTML page.</p>
+                    <p class="offset-l2 col l10">Design and development of a Web App that reads
+                        <br>an external and filter all the relevant information<br> in a human readable HTML page.</p>
                     <p class="category offset-l2 col l10"><strong>CATEGORY</strong></p>
                     <p class="category-text offset-l2 col l10">Website</p>
-                    <a class="view-case waves-effect waves-light btn offset-l3 col l1">View Case</a>
+                    <a class="view-case waves-effect waves-light btn offset-l3 col l1" href="https://amlexandria.github.io/data-dashboard/" target=”_blank”>View Case</a>
                 </div>
             </section>
-        </template> 
+        </template> -->
+    <!-- WORKS PORTFOLIO SECTION -->
+    <!-- <template v-if="section == 'works'"> -->
+        <section class="works portfolio-dev">
+            <div class="row ">
+                <div class="wrapperrr offset-l1 col l10 s12">
+                    <div class="carouselll">
+                        <div class="innerrr">
+                            <div class="slide active">
+                                <h4 class="offset-l1 col l10">L Dashboard</h4>
+                                <p class="offset-l1 text-caru col l10">Design and development of a Web App that reads
+                                    <br>an external and filter all the relevant information<br> in a human readable HTML page.</p>
+                                <p class="offset-l1 text-caru category  col l10"><strong>CATEGORY</strong></p>
+                                <p class="offset-l1 text-caru category-text  col l10">Website</p>
+                                <a class="lala view-case waves-effect waves-light btn offset-l3 col l1" href="https://amlexandria.github.io/data-dashboard/" target=”_blank”>View Case</a>
+                            </div>
+                            <div class="slide">
+                                <h4 class="offset-l1 col l10">To-Do App</h4>
+                                <p class="offset-l1 text-caru col l10">Design and development of a mobile App that
+                                    <br>let the user to login and manage (add, check and <br>remove) their tasks and storage them in firebase.</p>
+                                <p class="offset-l1 text-caru category  col l10"><strong>CATEGORY</strong></p>
+                                <p class="offset-l1 text-caru category-text  col l10">Mobile</p>
+                                <a class="lala view-case waves-effect waves-light btn offset-l3 col l1" href="https://todo-list-d3fbe.firebaseapp.com/" target=”_blank”>View Case</a>
+                            </div>
+                            <div class="slide">
+                                <h4 class="offset-l1 col l10">Take my Money (e-commerce)</h4>
+                                <p class="offset-l1 text-caru col l10">Development and design of an E-commerece
+                                    <br>following SPA model, using Mercado Libre and <br>Paypal APIs for products purchase.</p>
+                                <p class="offset-l1 text-caru category  col l10"><strong>CATEGORY</strong></p>
+                                <p class="offset-l1 text-caru category-text  col l10">Website</p>
+                                <a class="lala view-case waves-effect waves-light btn offset-l3 col l1" href="https://amlexandria.github.io/Take-my-money-e-commerce-/" target=”_blank”>View Case</a>
+                            </div>
+                            <div class="slide">
+                                <h4 class="offset-l1 col l10">Glinks MD</h4>
+                                <p class="offset-l1 text-caru col l10">Analysis and development of a Node.js module
+                                    <br>that receives a file that contains markdown text<br> and returns a list of all the links found.</p>
+                                <p class="offset-l1 text-caru category  col l10"><strong>CATEGORY</strong></p>
+                                <p class="offset-l1 text-caru category-text  col l10">Website</p>
+                                <a class="lala view-case waves-effect waves-light btn offset-l3 col l1" href="https://lorevazquez.github.io/extract-links-from-md/" target=”_blank”>View Case</a>
+                            </div>
+                            <div class="slide">
+                                    <h4 class="offset-l1 col l10">Trello</h4>
+                                    <p class="offset-l1 text-caru col l10">Design and development of a web application
+                                        <br>that replicates the basic functionality<br>of the Trello website.</p>
+                                    <p class="offset-l1 text-caru category  col l10"><strong>CATEGORY</strong></p>
+                                    <p class="offset-l1 text-caru category-text  col l10">Website</p>
+                                    <a class="lala view-case waves-effect waves-light btn offset-l3 col l1" href="https://amlexandria.github.io/Replicando-funcionalildad-de-Trello/" target=”_blank”>View Case</a>
+                                </div>
+                        </div>
+                        <div class="arrow arrow-left"></div>
+                        <div class="arrow arrow-right"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- </template> -->
+    <!-- PORTFOLIO DESIGN -->
+    <section class="works portfolio-design">
+            <div class="row ">
+                <div class="wrapperrr offset-l1 col l10 s12">
+                    <div class="carouselll">
+                        <div class="innerrr">
+                            <div class="slide active dslide">
+                                <h4 class="offset-l1 col l10">L Dashboard</h4>
+                                <p class="offset-l1 text-caru col l10">Design and development of a Web App that reads
+                                    <br>an external and filter all the relevant information<br> in a human readable HTML page.</p>
+                                <p class="offset-l1 text-caru category  col l10"><strong>CATEGORY</strong></p>
+                                <p class="offset-l1 text-caru category-text  col l10">Website</p>
+                                <a class="lala view-case waves-effect waves-light btn offset-l3 col l1" href="https://amlexandria.github.io/data-dashboard/" target=”_blank”>View Case</a>
+                            </div>
+                            <div class="slide dslide">
+                                <h4 class="offset-l1 col l10">To-Do App</h4>
+                                <p class="offset-l1 text-caru col l10">Design and development of a mobile App that
+                                    <br>let the user to login and manage (add, check and <br>remove) their tasks and storage them in firebase.</p>
+                                <p class="offset-l1 text-caru category  col l10"><strong>CATEGORY</strong></p>
+                                <p class="offset-l1 text-caru category-text  col l10">Mobile</p>
+                                <a class="lala view-case waves-effect waves-light btn offset-l3 col l1" href="https://todo-list-d3fbe.firebaseapp.com/" target=”_blank”>View Case</a>
+                            </div>
+                            <div class="slide dslide">
+                                <h4 class="offset-l1 col l10">Take my Money (e-commerce)</h4>
+                                <p class="offset-l1 text-caru col l10">Development and design of an E-commerece
+                                    <br>following SPA model, using Mercado Libre and <br>Paypal APIs for products purchase.</p>
+                                <p class="offset-l1 text-caru category  col l10"><strong>CATEGORY</strong></p>
+                                <p class="offset-l1 text-caru category-text  col l10">Website</p>
+                                <a class="lala view-case waves-effect waves-light btn offset-l3 col l1" href="https://amlexandria.github.io/Take-my-money-e-commerce-/" target=”_blank”>View Case</a>
+                            </div>
+                            <div class="slide dslide">
+                                <h4 class="offset-l1 col l10">Glinks MD</h4>
+                                <p class="offset-l1 text-caru col l10">Analysis and development of a Node.js module
+                                    <br>that receives a file that contains markdown text<br> and returns a list of all the links found.</p>
+                                <p class="offset-l1 text-caru category  col l10"><strong>CATEGORY</strong></p>
+                                <p class="offset-l1 text-caru category-text  col l10">Website</p>
+                                <a class="lala view-case waves-effect waves-light btn offset-l3 col l1" href="https://lorevazquez.github.io/extract-links-from-md/" target=”_blank”>View Case</a>
+                            </div>
+                            <div class="slide dslide">
+                                    <h4 class="offset-l1 col l10">Trello</h4>
+                                    <p class="offset-l1 text-caru col l10">Design and development of a web application
+                                        <br>that replicates the basic functionality<br>of the Trello website.</p>
+                                    <p class="offset-l1 text-caru category  col l10"><strong>CATEGORY</strong></p>
+                                    <p class="offset-l1 text-caru category-text  col l10">Website</p>
+                                    <a class="lala view-case waves-effect waves-light btn offset-l3 col l1" href="https://amlexandria.github.io/Replicando-funcionalildad-de-Trello/" target=”_blank”>View Case</a>
+                                </div>
+                        </div>
+                        <div class="arrow arrow-left"></div>
+                        <div class="arrow arrow-right"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+   
 
     </div>
-    
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Are you ready for your next project?<span class="text-footer grey-text text-lighten-4">    Uncover its potential.</span></h5>  
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Contact me</h5>
+                    <ul>
+                        <li><i class="far fa-envelope"></i><span class="text-footer">  ambar.vac@gmail.com</span></li>
+                        <li><i class="fas fa-mobile-alt"></i><span class="text-footer">  044 33 1272 9701</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+          <!-- <div class="container">
+          © 2018 Copyright Text
+          </div> -->
+        </div>
+    </footer>
 
 
 
@@ -103,5 +240,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="js/app.js"></script>
     <script src="js/intro.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>
