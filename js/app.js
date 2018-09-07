@@ -5,6 +5,8 @@ const app = new Vue ({
     el: '#vue',
     data:{
         section: "intro",
+        x: false,
+        y: false,
     },
     methods:{
 
@@ -18,10 +20,16 @@ const app = new Vue ({
         },
 
         showingWorks: function(e){
+            debugger;
             e.preventDefault();
+            $('#works-section section.works').empty();
             this.section = "works"
+            
             this.$nextTick(function () {
-                $('.carouselll').Zippy(args); // => 'updated'
+                if(!this.x){
+                $('.carouselll').Zippy(args);
+                this.x = true;
+            } // => 'updated'
               })
             
         },
@@ -29,8 +37,14 @@ const app = new Vue ({
         showingDev: function(e){
             e.preventDefault();
             this.section = "dev"
+            console.log(this.y);
+            $('.innerrr').empty();
             this.$nextTick(function () {
-                $('.carouselll').Zippy(args); // => 'updated'
+                // if(!this.y){
+                    
+                    $('.carouselll').Zippy(args);
+                    this.y = true;
+                // }  // => 'updated'
               })
             
         },
@@ -38,6 +52,7 @@ const app = new Vue ({
         showingDesigner: function(e){
             e.preventDefault();
             this.section = "designer"
+            $('.innerrr').empty();
             this.$nextTick(function () {
                 $('.carouselll').Zippy(args); // => 'updated'
               })

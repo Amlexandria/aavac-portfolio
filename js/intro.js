@@ -284,7 +284,7 @@ lb.click(function() {
     scrolling = false;
     if (curPage <= 3) {
       // scrollIn.addClass('opa');
-      scrollIn2.addClass('opa');
+      // scrollIn2.addClass('opa');
     }
   }
   setTimeout(() => {

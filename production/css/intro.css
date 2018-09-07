@@ -36,13 +36,13 @@
 
 .button-left,
 .button-right {
-  width: 15rem;
+  width: 18rem;
   height: 50px;
   color: black;
   background: transparent;
   z-index: 20;
   overflow: hidden;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
   font-weight: 100;
   position: absolute;
   top: 0;
@@ -65,14 +65,22 @@
     width: 15rem;
     z-index: -1;
     height: 0;
-    background: #fff;
+    /* background: #fff; */
     color: #1b1b1b;
     transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+  .button-left:hover,
+  .button-right:hover {
+    font-family: 'Monoton', cursive;
+    font-size: 2.5rem;
+    color: #2ECC71;
+  }
   .button-left:hover:before,
   .button-right:hover:before {
     top: 0;
     height: 50px;
-    padding-top: 14px; }
+    padding-top: 14px;
+    color: #2ECC71;}
+     
   .button-left .view,
   .button-right .view {
     color: black;
@@ -80,7 +88,7 @@
     z-index: 20; }
 
 .button-left {
-  margin-left: 19vw; }
+  margin-left: 11vw; }
 
 .button-right {
   margin-left: 69vw; }
